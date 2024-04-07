@@ -6,14 +6,27 @@
     <title>Document</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
-<body>
+<body onDocu>
     <div class="container"> 
     <input type="text"><br>
     <input type="text"><br>
     <input type="text"><br>
     <input type="text"><br>
     <input type="text"><br>
-    <input type="button" value="OK">
+    <input type="button" value="OK" onclick="javascript:CalcRes();">
     </div>
+    <div id="screen_info1"></div>
+    <div id="screen_info2"></div>
+
+    <script>
+        function CalcRes(){
+        let c1 = document.getElementById("screen_info1");
+        c1.innerText =  window.screen.availHeight;
+
+        let c2 = document.getElementById("screen_info2");
+        c2.innerText =  window.screen.availWidth;
+        }
+
+    </script>
 </body>
 </html>
